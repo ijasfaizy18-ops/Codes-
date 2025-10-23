@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback for basic website</title>
+</head>
+<body >
+    <script>
+        function myFunction() {
+            var feedback = "   I loved the FOOD and the service!   ";
+            var spec = feedback.trim();
+            console.log("Trimmed:", spec);
+            console.log("Lowercase:", spec.toLowerCase());
+            console.log("Replaced 'FOOD' with 'ambience':", spec.replace("FOOD", "ambience"));
+            console.log("Position of 'service':", spec.indexOf("service"));
+            console.log("Split into words:", spec.split(" "));
+        }
+        myFunction("")
+    </script>
+</body>
+</html>
