@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment filtering system</title>
+</head>
+<body>
+    <p id="comment"></p>
+    <p id="numcount"></p>
+    <p id="capCount"></p>
+    <script>
+        function commentFilter() {
+            var input = prompt("Enter your comment:");
+            var output = input.replace(/(bad|ugly|stupid)/gi, "****");
+            var numbers = output.match(/[0-9]+/g);
+            var capitals = output.match(/\b[A-Z]/g);
+            document.getElementById("comment").innerHTML = `Filtered Comment: ${output}`;
+            document.getElementById("numcount").innerHTML = `Number count: ${numbers.length}`;
+            document.getElementById("capCount").innerHTML = `Capitalized count: ${capitals.length}`;
+        }
+        commentFilter();
+    </script>
+</body>
+</html>

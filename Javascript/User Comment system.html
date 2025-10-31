@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Comment system</title>
+</head>
+<body>
+    <p id="newtext"></p>
+    <p id="result"></p>
+    <script>
+        var input = prompt("Enter your comment");
+        var output = input.replace(/[0-9]+/gi, "NUMBER");
+        document.getElementById("result").innerHTML = /[0-9]+/.test(input);
+        document.getElementById("newtext").innerHTML = output;
+   </script>
+</body>
+</html>
