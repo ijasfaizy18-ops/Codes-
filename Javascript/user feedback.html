@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const containsThank = (input) => /thank/i.test(input.message);
+        try {
+            const name = prompt("Enter your name:");
+            const email = prompt("Enter your email:");
+            const message = prompt("Enter your feedback message:");
+
+            const jsonString = JSON.stringify({ name, email, message });
+            const feedback = JSON.parse(jsonString);
+
+            const result = containsThank(feedback);
+            if (result) {
+                console.log("Positive feedback received");
+            }
+            else {
+                console.log("Feedback noted");
+            }
+        }
+        catch (error) {
+        console.error("Invalid JSON format:", error.message);
+        }
+    </script>
+</body>
+</html>
